@@ -15,41 +15,6 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-/* -------------HEADER--------------------------- */
-
-/* header {
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-button {
-  height: 50px;
-  padding: 15px 40px 15px 40px;
-  background-image: url(../img/tartan1.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  text-align: center;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 5px;
-  border: 0px;
-}
-
-#playPauseBTN {
-  position: absolute;
-  left: 750px;
-  top: 35px;
-}
-
-#stopMusicBTN {
-  position: absolute;
-  right: 750px;
-  top: 35px;
-} */
 
 /* -----------------------MAIN------------------------------------- */
 
@@ -62,10 +27,12 @@ main {
 
 .left-arrow .fa-chevron-left {
   padding-right: 50px;
+  color: red;
 }
 
 .right-arrow .fa-chevron-right {
   padding-left: 50px;
+  color: red;
 }
 
 .photos {

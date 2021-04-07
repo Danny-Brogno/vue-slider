@@ -13,34 +13,37 @@ function carousel() {
 
     el: "#containerId",
     data: {
-      "url1": "img/edinburgh1.jpg",
-      "url2": "img/edinburgh2.jpg",
-      "url3": "img/edinburgh3.jpg",
-      "url4": "img/edinburgh4.jpg",
-      "url5": "img/edinburgh5.jpg",
-      "url6": "img/edinburgh6.jpg",
-      "url7": "img/inverness1.jpg",
-      "url8": "img/inverness2.jpg",
-      "url9": "img/scotland1.jpg",
-      "url10": "img/scotland2.jpg",
-      "url11": "img/scotland3.jpg",
-      "url12": "img/tartan1.png"
+
+      "activeImg": 0,
+      // ARRAY WITH IMG PATH STRINGS
+      "images": ["img/roma1.jpg", "img/roma2.jpg", "img/roma3.jpg", "img/roma4.jpg", "img/roma5.jpg", "img/roma6.jpg", "img/roma7.jpg", "img/roma8.jpg", "img/roma9.jpg", "img/roma10.jpg", "img/roma11.jpg", "img/roma12.png"]
     }, // END OF DATA
 
     methods: {
+
       forward: function() {
-        console.log("FORWARD");
+
+        if (this.activeImg == (this.images.length - 1)) {
+          this.activeImg = 0;
+        } else {
+          this.activeImg++;
+        }
       }, // END OF FORWARD
 
       backwards: function() {
-        console.log("BACKWARDS");
+
+        if (this.activeImg == 0) {
+          this.activeImg = this.images.length - 1;
+        } else {
+          this.activeImg--;
+        }
       } // END OF BACKWARDS
 
     } // END OF METHODS
 
   }); // END OF VUE
 
-} // END OF FUNCTION IMAGES
+} // END OF FUNCTION CAROUSEL
 
 // --------------END BONUS------------------------------------------------------
 

@@ -17,17 +17,6 @@
     </head>
     <body>
 
-      <!-- <header>
-
-        <audio id="audio">
-          <source src="audio/red-hot-chilli-pipers-100-pipers.m4a">
-        </audio>
-
-        <button id="playPauseBTN">Play</button>
-        <button id="stopMusicBTN">Stop</button>
-
-      </header> -->
-
       <main id="containerId">
         <!---__________ ARROW L__________ -->
 
@@ -39,18 +28,7 @@
 
         <!---__________ PICTURES__________ -->
         <div class="photos">
-          <img class="picture start active" :src="url1">
-          <img class="picture" :src="url2">
-          <img class="picture" :src="url3">
-          <img class="picture" :src="url4">
-          <img class="picture" :src="url5">
-          <img class="picture" :src="url6">
-          <img class="picture" :src="url7">
-          <img class="picture" :src="url8">
-          <img class="picture" :src="url9">
-          <img class="picture" :src="url10">
-          <img class="picture" :src="url11">
-          <img class="picture end" :src="url12">
+          <img class="picture active" :src="images[activeImg]">
         </div>
 
         <!---__________ ARROW R__________ -->
@@ -60,7 +38,7 @@
           </a>
         </div>
 
-      </main>
+      </main> <!-- END OF MAIN -->
 
       <footer>
 
