@@ -1,72 +1,53 @@
 
-function previousClick() {
+function numberGenerator(min, max) {
+  let localMin = min;
+  let localMax = max - min + 1;
+  return Math.floor(Math.random() * (localMax - localMin)) + localMin;
+} // END OF FUNCTION numberGenerator
 
-  var currentImg = $(".active");
+// -----------------------------------------------------------------------------
 
-  if (currentImg.hasClass("start")) {
+function images() {
 
-    var previousImg = $("img.end");
-    currentImg.removeClass("active");
-    previousImg.addClass("active");
+  new Vue({
 
-  } else {
+    el: "#containerId",
+    data: {
+      "url1": "img/edinburgh1.jpg",
+      "url2": "img/edinburgh2.jpg",
+      "url3": "img/edinburgh3.jpg",
+      "url4": "img/edinburgh4.jpg",
+      "url5": "img/edinburgh5.jpg",
+      "url6": "img/edinburgh6.jpg",
+      "url7": "img/inverness1.jpg",
+      "url8": "img/inverness2.jpg",
+      "url9": "img/scotland1.jpg",
+      "url10": "img/scotland2.jpg",
+      "url11": "img/scotland3.jpg",
+      "url12": "img/tartan1.png"
+    }, // END OF DATA
 
-    var previousImg = currentImg.prev("img");
-    currentImg.removeClass("active");
-    previousImg.addClass("active");
-  }
-}
+    methods: {
+      forward: function() {
+        console.log("FORWARD");
+      }, // END OF FORWARD
 
-function nextClick() {
+      backwards: function() {
+        console.log("BACKWARDS");
+      } // END OF BACKWARDS
 
-  var currentImg = $(".active");
+    } // END OF METHODS
 
-  if (currentImg.hasClass("end")) {
+  }); // END OF VUE
 
-    var nextImg = $("img.start");
-    currentImg.removeClass("active");
-    nextImg.addClass("active");
+} // END OF FUNCTION IMAGES
 
-  } else {
-
-    var nextImg = currentImg.next("img");
-    currentImg.removeClass("active");
-    nextImg.addClass("active");
-  }
-}
-// ----------------BONUS---------------------------------------
-
-
-function playPauseFun() {
-
-  var audio = document.getElementById("audio");
-  var playPause = document.getElementById("playPauseBTN");
-  var stop = document.getElementById("stopMusicBTN");
-
-  if(audio.paused) {
-    audio.play();
-    playPauseBTN.innerHTML = "Pause &#9658";
-  } else {
-    audio.pause();
-    playPauseBTN.innerHTML = "Play &#9658";
-  }
-}
-
-function stopFun() {
-  audio.pause();
-  audio.currentTime = 0;
-  stop.innerHTML = "Stop &#9658";
-  playPauseBTN.innerHTML = "Stop &#9658";
-
-}
-
-// --------------END BONUS-----------------------------------------
+// --------------END BONUS------------------------------------------------------
 
 function init () {
-  $(".right-arrow").click(nextClick);
-  $(".left-arrow").click(previousClick);
-  $("#playPauseBTN").click(playPauseFun);
-  $("#stopMusicBTN").click(stopFun);
+  images();
+
 }
 
-$(document).ready(init);
+$(init);
+// -----------------------------------------------------------------------------
