@@ -7,7 +7,7 @@ function numberGenerator(min, max) {
 
 // -----------------------------------------------------------------------------
 
-function images() {
+function carousel() {
 
   new Vue({
 
@@ -45,7 +45,7 @@ function images() {
 // --------------END BONUS------------------------------------------------------
 
 function init () {
-  images();
+  carousel();
 
 }
 
