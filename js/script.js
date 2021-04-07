@@ -37,7 +37,7 @@ function carousel() {
         } else {
           this.activeImg--;
         }
-      } // END OF BACKWARDS
+      }, // END OF BACKWARDS
 
     } // END OF METHODS
 
