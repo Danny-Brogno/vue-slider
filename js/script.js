@@ -39,7 +39,13 @@ function carousel() {
         }
       }, // END OF BACKWARDS
 
-    } // END OF METHODS
+    }, // END OF METHODS
+    mounted() {
+      setInterval(() => {
+        this.forward();
+      }, 4000);
+    }
+
 
   }); // END OF VUE
 

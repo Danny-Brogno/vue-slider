@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -15,7 +16,9 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+
 /* ------------------HEADER-------------------------------------------------- */
+
 header {
   display: flex;
   justify-content: center;
@@ -26,6 +29,7 @@ audio {
   color: red;
   border-radius: 10px;
 }
+
 /* -----------------------MAIN----------------------------------------------- */
 
 main {
@@ -34,6 +38,7 @@ main {
   height: 100vh;
   line-height: 100vh;
 }
+
 
 .left-arrow .fa-chevron-left {
   padding-right: 50px;

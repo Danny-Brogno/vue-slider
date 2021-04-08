@@ -26,8 +26,8 @@
       </header>
 
       <main id="containerId">
-        <!---__________ ARROW L__________ -->
 
+        <!---__________ ARROW L__________ -->
         <div class="left-arrow">
           <a href="#">
             <i @click="backwards" id="arrow-left" class="fas fa-chevron-left"></i>
@@ -46,6 +46,12 @@
           </a>
         </div>
 
+
+        <!---__________BULLETS__________ -->
+        <div class="bullets">
+          <!-- <i class="change-color fas fa-circle" v-for="ind in images.length"></i> -->
+          <!-- <i :class="(ind - 1 == activeImg) ? 'active' : '' " class="change-color fas fa-circle" v-for="ind in images.length"></i> -->
+        </div>
       </main> <!-- END OF MAIN -->
 
       <footer>
